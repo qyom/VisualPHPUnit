@@ -1,16 +1,19 @@
 <?php
 
 $root = dirname(dirname(__DIR__));
+$rootZizico = dirname($root) . '/zizico';
 
 $config = array(
     /* Required */
 
     // The directory where PEAR is located
-    'pear_path'      => '/usr/share/pear',
+    'pear_path'      => 'C:\xampp\php\pear',
 
     // The directories where the tests reside
     'test_directories' => array(
-        "{$root}/app/test"
+        //"{$root}/app/test",
+        $rootZizico . '/test',
+
     ),
 
 
@@ -70,7 +73,7 @@ $config = array(
 
     // Paths to any necessary bootstraps
     'bootstraps' => array(
-        // '/path/to/bootstrap.php'
+        $root . '/app/config/bootstrap/zizico.php',
     )
 );
 
