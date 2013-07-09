@@ -12,7 +12,7 @@ $config = array(
     // The directories where the tests reside
     'test_directories' => array(
         //"{$root}/app/test",
-        $rootZizico . '/test',
+        $rootZizico . '/tests',
 
     ),
 
@@ -55,7 +55,7 @@ $config = array(
     // http://us3.php.net/manual/en/errorfunc.constants.php
     // http://us3.php.net/manual/en/function.error-reporting.php
     // http://us3.php.net/set_error_handler
-    'error_reporting' => E_ALL | E_STRICT,
+    'error_reporting' => E_ALL ^ E_NOTICE,//E_ALL | E_STRICT,
 
     // Whether or not to ignore hidden folders
     // (i.e., folders with a '.' prefix)
